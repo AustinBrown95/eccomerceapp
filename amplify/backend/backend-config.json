@@ -89,6 +89,38 @@
           "resourceName": "eccomerceappfeccef7fPostConfirmation"
         }
       ]
+    },
+    "AMPLIFY_function_eccomerceappfeccef7fPostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eccomerceappfeccef7fPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_eccomerceappfeccef7fPostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eccomerceappfeccef7fPostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_eccomercefunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eccomercefunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_eccomercefunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "eccomercefunction"
+        }
+      ]
     }
   },
   "storage": {
