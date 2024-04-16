@@ -1,1 +1,9 @@
-{}
+{
+  "function": {
+    "eccomerceappfeccef7fPostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}
