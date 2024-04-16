@@ -20,6 +20,27 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 
+const AWS = require('aws-sdk')
+const { v4: uuid } = require('uuid')
+
+const cognito = new
+AWS.CognitoIdentityServiceProvider({
+  apiVersion: '2016-04-18'
+})
+
+/* Cognito User Pool ID
+*  This User Pool ID variable will be given to you by the CLI output after
+   adding the category
+*  This will also be available in the file itself, commented out at the top
+*/
+var userpoolId = process.env.AUTH_ECCOMERCEAPPFECCEF7F_USERPOOLID
+
+
+const region = process.env.REGION
+const ddb_table_name = process.env.STORAGE_PRODUCTTABLE_NAME
+const docClient = new AWS.DynamoDB.DocumentClient({region})
+
+
 // declare a new express app
 const app = express()
 app.use(bodyParser.json())
