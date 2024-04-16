@@ -1,4 +1,20 @@
 {
+  "api": {
+    "eccomerceapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "eccomercefunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "eccomerceappfeccef7f": {
       "customAuth": false,
@@ -38,6 +54,29 @@
   "function": {
     "eccomerceappfeccef7fPostConfirmation": {
       "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "eccomercefunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "eccomerceappfeccef7f"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "producttable"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }

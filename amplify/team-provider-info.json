@@ -18,7 +18,8 @@
       "function": {
         "eccomerceappfeccef7fPostConfirmation": {
           "GROUP": "Admin"
-        }
+        },
+        "eccomercefunction": {}
       }
     }
   }
